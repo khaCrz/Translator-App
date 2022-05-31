@@ -1,4 +1,4 @@
-#Tue May 31 16:51:49 ICT 2022
+#Tue May 31 22:46:12 ICT 2022
 base.2=C\:\\Users\\ADMIN\\AndroidStudioProjects\\TraslatorApp\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\5\\classes.dex
 path.2=5/classes.dex
 base.1=C\:\\Users\\ADMIN\\AndroidStudioProjects\\TraslatorApp\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex

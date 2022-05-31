@@ -56,12 +56,13 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_main);
         initUi();
         btnTranslate_text.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                translate_api translate=new translate_api();
+                translate_api translate = new translate_api();
                 translate.setOnTranslationCompleteListener(new translate_api.OnTranslationCompleteListener() {
                     @Override
                     public void onStartTranslation() {
@@ -104,6 +105,7 @@ public class MainActivity extends AppCompatActivity {
         img.setImageBitmap(bmp);
     }
 
+
     public void Detect(){
         //TODO 1. define TextRecognizer
         TextRecognizer textRecognizer = new TextRecognizer.Builder(MainActivity.this).build();
@@ -130,7 +132,7 @@ public class MainActivity extends AppCompatActivity {
             //Loop through each `Word`
             for (Text line : tb.getComponents())
             {
-                System.out.println(line.getValue());
+                //System.out.println(line.getValue());
                 arrRect.add(new RectF(line.getBoundingBox()));
                 //Loop through each `Word`
 //                for (Text currentword : line.getComponents())
@@ -142,8 +144,30 @@ public class MainActivity extends AppCompatActivity {
 
 
         }
-        translatedText.setText(stringBuilder);
+
+
+        translate_api translate = new translate_api();
+        translate.setOnTranslationCompleteListener(new translate_api.OnTranslationCompleteListener() {
+            @Override
+            public void onStartTranslation() {
+                // here you can perform initial work before translated the text like displaying progress bar
+            }
+            @Override
+            public void onCompleted(String text) {
+                // "text" variable will give you the translated text
+                translatedText.setText(text);
+            }
+            @Override
+            public void onError(Exception e) {
+
+            }
+        });
+        translate.execute(stringBuilder.toString(),fromLangCode.getText().toString(),toLangCode.getText().toString());
+        //translate.execute(stringBuilder.toString(),fromLangCode.getText().toString(),toLangCode.getText().toString());
+        //translatedText.setText(stringBuilder);
+
         drawRect(arrRect, imgV);
+
     }
 
     private void dispatchTakePictureIntent() {
