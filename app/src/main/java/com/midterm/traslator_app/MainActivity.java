@@ -165,7 +165,7 @@ public class MainActivity extends AppCompatActivity {
                     if (currentword.getValue().contains(".")) {
                         str += currentword.getValue();
                         arr_sentense.add(str);
-
+                        System.out.println("3123123");
 
                         //sentenceArrayList.add(new Sentence(str, ))
                         str = "";
