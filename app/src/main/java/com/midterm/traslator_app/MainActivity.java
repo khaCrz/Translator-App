@@ -18,6 +18,7 @@ import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
+import android.graphics.Rect;
 import android.graphics.RectF;
 import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
@@ -100,74 +101,107 @@ public class MainActivity extends AppCompatActivity {
         rectPaint.setStyle(Paint.Style.STROKE);
         rectPaint.setStrokeWidth(4.0f);
         for (RectF rect: arrRect) {
+            System.out.println(rect);
             c.drawRect(rect,rectPaint);
         }
         img.setImageBitmap(bmp);
     }
 
 
-    public void Detect(){
+    public void Detect() {
         //TODO 1. define TextRecognizer
         TextRecognizer textRecognizer = new TextRecognizer.Builder(MainActivity.this).build();
 
         //TODO 2. Get bitmap from imageview
-        Bitmap bitmap = ((BitmapDrawable)imgV.getDrawable()).getBitmap();
+        Bitmap bitmap = ((BitmapDrawable) imgV.getDrawable()).getBitmap();
 
         //TODO 3. get frame from bitmap
         Frame frame = new Frame.Builder().setBitmap(bitmap).build();
 
         //TODO 4. get data from frame
         SparseArray<TextBlock> sparseArray = textRecognizer.detect(frame);
-        //TODO 5. set data on textview
-        StringBuilder stringBuilder = new StringBuilder();
-
-        ArrayList<RectF> arrRect = new ArrayList<>();
         //The Color of the Rectangle to Draw on top of Text
         //Loop through each `Block`
+        ArrayList<Text> Data = new ArrayList<>();
         for (int i = 0; i < sparseArray.size(); i++) {
             TextBlock tb = sparseArray.get(i);
-            String str = tb.getValue();
-            stringBuilder.append(str);
-            stringBuilder.append(" ");
-            //Loop through each `Word`
-            for (Text line : tb.getComponents())
-            {
-                //System.out.println(line.getValue());
-                arrRect.add(new RectF(line.getBoundingBox()));
-                //Loop through each `Word`
-//                for (Text currentword : line.getComponents())
-//                {
-//                    //Get the Rectangle/boundingBox of the word
-//                    arrRect.add(new RectF(currentword.getBoundingBox()));
-//                }
+            for (Text line : tb.getComponents()) {
+                Data.add(line);
             }
+        }
+        Xuly(Data);
+//        String txt = "";
+//        for (String line : arr_sentense) {
+//            txt += line;
+//            System.out.println(line);
+//            txt += "\n";
+//        }
+//        translatedText.setText(txt);
+        //drawRect(arrRect, imgV);
+    }
 
-
+    public void Xuly(ArrayList<Text> Data){
+        String str = "";
+        ArrayList<String> arr_sentense = new ArrayList<>();
+        ArrayList<Sentence> sentenceArrayList = new ArrayList<>();
+        ArrayList<RectF> arrRect = new ArrayList<>();
+        float x1 = 0, y1 = 0, x2 = 0, y2 = 0;
+        int id = 0;
+        int count_sentence = 1;
+        for (Text line : Data){
+            if(line.getValue().contains(".")){
+                sentenceArrayList.add(new Sentence(count_sentence,""));
+                count_sentence++;
+            }
         }
 
+        //System.out.println(sentenceArrayList);
+        for (Text line : Data) {
+            RectF rect = new RectF(line.getBoundingBox());
+            x1 = rect.left;
+            y1 = rect.top;
+            if (line.getValue().contains(".")) {
+                for (Text currentword : line.getComponents()) {
+                    if (currentword.getValue().contains(".")) {
+                        str += currentword.getValue();
+                        arr_sentense.add(str);
 
-        translate_api translate = new translate_api();
-        translate.setOnTranslationCompleteListener(new translate_api.OnTranslationCompleteListener() {
-            @Override
-            public void onStartTranslation() {
-                // here you can perform initial work before translated the text like displaying progress bar
-            }
-            @Override
-            public void onCompleted(String text) {
-                // "text" variable will give you the translated text
-                translatedText.setText(text);
-            }
-            @Override
-            public void onError(Exception e) {
 
+                        //sentenceArrayList.add(new Sentence(str, ))
+                        str = "";
+                        x2 = currentword.getBoundingBox().right;
+                        y2 = currentword.getBoundingBox().bottom;
+                        //add vao
+                        arrRect.add(new RectF(x1,y1,x2,y2));
+                    } else {
+                        if(str.equals("")){
+                            x1 = currentword.getBoundingBox().left;
+                            y1 = currentword.getBoundingBox().top;
+                        }
+                        str += currentword.getValue();
+                        str += " ";
+                        x2 = currentword.getBoundingBox().right;
+                        y2 = currentword.getBoundingBox().bottom;
+                    }
+                }
+                arrRect.add(new RectF(x1,y1,x2,y2));
+            } else {
+                str += line.getValue();
+                str += " ";
+                x1 = rect.left;
+                y1 = rect.top;
+                x2 = x1 + rect.width();
+                y2 = y1 + rect.height();
+                arrRect.add(new RectF(x1,y1,x2,y2));
             }
-        });
-        translate.execute(stringBuilder.toString(),fromLangCode.getText().toString(),toLangCode.getText().toString());
-        //translate.execute(stringBuilder.toString(),fromLangCode.getText().toString(),toLangCode.getText().toString());
-        //translatedText.setText(stringBuilder);
-
+        }
         drawRect(arrRect, imgV);
-
+        String txt = "";
+        for (String i : arr_sentense) {
+            txt += i + "--\n\n";
+        }
+        translatedText.setText(txt);
+//        System.out.println(sentenceArrayList);
     }
 
     private void dispatchTakePictureIntent() {
