@@ -14,6 +14,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
+import android.widget.ArrayAdapter;
 import android.widget.CompoundButton;
 
 import androidx.fragment.app.Fragment;
@@ -24,7 +25,8 @@ import com.example.translateapp.databinding.FragmentHomeBinding;
 public class HomeFragment extends Fragment {
 
     public WindowManager windowManager;
-
+    String[] fromLanguage = {"From","Abkhazian", "Chinese", "Croatian", "Czech", "Danish", "Divehi, Dhivehi, Maldivian","Dutch","Dzongkha","English","Esperanto","Estonian","Fijian","Finnish","French","Fula, Fulah, Pulaar, Pular","Galician","Gaelic (Scottish)","Gaelic (Manx)","German","Hindi","Hungarian","Icelandic","Indonesian","Italian","Japanese","Javanese","Khmer","Korean","Latin","Latvian (Lettish)","Malay","Malayalam","Polish","Portuguese","Punjabi (Eastern)","Romanian","Russian","Sami","Samoan","Somali","Southern Ndebele","Spanish","Tajik",
+            "Tamil","Thai","Ukrainian", "Vietnamese"};
     private FragmentHomeBinding binding;
     public HomeFragment() {
         // Required empty public constructor
@@ -36,6 +38,9 @@ public class HomeFragment extends Fragment {
         binding = FragmentHomeBinding.inflate(inflater,container,false);
         SharedPreferences sharedPreferences = getActivity().getSharedPreferences("save",getActivity().MODE_PRIVATE);
         binding.switchbtn.setChecked(sharedPreferences.getBoolean("value",false));
+        ArrayAdapter fromAdapter = new ArrayAdapter(this.getContext(), R.layout.spinner_item, fromLanguage);
+        fromAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        binding.spinerBtn.setAdapter(fromAdapter);
         binding.switchbtn.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {

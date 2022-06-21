@@ -53,8 +53,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
                 return true;
 
             case R.id.settings:
-                getSupportFragmentManager().beginTransaction().replace(R.id.home_layout
-                        , thirdFragment).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.home_layout, thirdFragment).commit();
                 return true;
         }
         return false;
