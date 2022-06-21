@@ -1,20 +1,147 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".View.TranslateFragment">
+    android:orientation="vertical">
+    <LinearLayout
+        android:backgroundTint="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal">
 
-    <!-- TODO: Update blank fragment layout -->
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@color/cardview_dark_background"
-             />
+        <Spinner
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="60dp"
+            android:tooltipText=""
+            android:layout_marginLeft="10dp"
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            ></Spinner>
 
-</FrameLayout>
+        <ImageButton
+            android:background="@color/white"
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="60dp"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/ic_baseline_swap_horiz_24"
+            ></ImageButton>
+        <Spinner
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            ></Spinner>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="272dp"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:gravity="top"
+            android:hint="Input Text"
+            android:textSize="20dp"></EditText>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="20dp"
+                android:background="@color/white"
+                android:scaleType="fitCenter"
+                android:src="@drawable/sound1"></ImageButton>
+
+            <ImageButton
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="20dp"
+                android:background="@color/white"
+                android:src="@drawable/ic_baseline_camera_alt_24"
+
+                ></ImageButton>
+
+            <ImageButton
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="20dp"
+                android:background="@color/white"
+                android:src="@drawable/ic_baseline_mic_24"></ImageButton>
+
+            <ImageButton
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:background="@color/white"
+                android:src="@drawable/ic_baseline_close_24"></ImageButton>
+        </LinearLayout>
+
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:text="Translate"></Button>
+    </LinearLayout>
+    <LinearLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="270dp"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="64dp"
+                android:layout_marginLeft="340dp"
+                android:layout_height="match_parent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_baseline_star_border_24"
+                ></ImageView>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:hint="Output Text"
+            android:textSize="20dp"
+            ></TextView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+            android:orientation="horizontal">
+            <ImageButton
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="250dp"
+                android:background="@color/white"
+                android:scaleType="fitCenter"
+                android:src="@drawable/sound1"></ImageButton>
+
+            <ImageButton
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:background="@color/white"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_baseline_content_copy_24"></ImageButton>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
