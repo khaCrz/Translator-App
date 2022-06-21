@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/ADMIN/Desktop/Translate-app-loc/Translator-App/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/ADMIN/Desktop/Translate-app-loc/Translator-App/app/src/main/res/layout/fragment_home.xml" value="0.25" />
+        <entry key="..\:/Users/ADMIN/Desktop/Translate-app-loc/Translator-App/app/src/main/res/layout/fragment_setting.xml" value="0.25" />
+        <entry key="..\:/Users/ADMIN/Desktop/Translate-app-loc/Translator-App/app/src/main/res/layout/fragment_translate.xml" value="0.25" />
+        <entry key="..\:/Users/ADMIN/Desktop/Translate-app-loc/Translator-App/app/src/main/res/layout/layout_floating_widget.xml" value="0.25" />
+        <entry key="..\:/Users/leloc/AndroidStudioProjects/TranslateApp/app/src/main/res/drawable-v24/ic_baseline_camera_alt_24.xml" value="0.3635" />
+        <entry key="..\:/Users/leloc/AndroidStudioProjects/TranslateApp/app/src/main/res/drawable-v24/ic_baseline_home_24.xml" value="0.1715" />
+        <entry key="..\:/Users/leloc/AndroidStudioProjects/TranslateApp/app/src/main/res/drawable/ic_baseline_translate_24.xml" value="0.1715" />
+        <entry key="..\:/Users/leloc/AndroidStudioProjects/TranslateApp/app/src/main/res/drawable/pink_out_line.xml" value="0.1715" />
+        <entry key="..\:/Users/leloc/AndroidStudioProjects/TranslateApp/app/src/main/res/drawable/thump.xml" value="0.3635" />
+        <entry key="..\:/Users/leloc/AndroidStudioProjects/TranslateApp/app/src/main/res/drawable/toggle_widget_background.xml" value="0.1715" />
+        <entry key="..\:/Users/leloc/AndroidStudioProjects/TranslateApp/app/src/main/res/drawable/track.xml" value="0.3635" />
+        <entry key="..\:/Users/leloc/AndroidStudioProjects/TranslateApp/app/src/main/res/layout/activity_main.xml" value="0.3625" />
+        <entry key="..\:/Users/leloc/AndroidStudioProjects/TranslateApp/app/src/main/res/layout/fragment_home.xml" value="0.5" />
+        <entry key="..\:/Users/leloc/AndroidStudioProjects/TranslateApp/app/src/main/res/layout/fragment_setting.xml" value="0.3625" />
+        <entry key="..\:/Users/leloc/AndroidStudioProjects/TranslateApp/app/src/main/res/layout/fragment_translate.xml" value="0.3625" />
+        <entry key="..\:/Users/leloc/AndroidStudioProjects/TranslateApp/app/src/main/res/layout/layout_floating_widget.xml" value="0.3625" />
+        <entry key="..\:/Users/leloc/AndroidStudioProjects/TranslateApp/app/src/main/res/layout/popup_window.xml" value="0.3625" />
+        <entry key="..\:/Users/leloc/AndroidStudioProjects/TranslateApp/app/src/main/res/menu/navigation_menu.xml" value="0.3625" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
