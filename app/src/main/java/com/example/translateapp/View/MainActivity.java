@@ -105,6 +105,8 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
+        firstFragment.onActivityRS(requestCode,resultCode,data);
         secondFragment.onActivityRS(requestCode,resultCode,data);
+
     }
 }
