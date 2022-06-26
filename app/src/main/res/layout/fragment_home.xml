@@ -36,6 +36,7 @@
             app:track="@drawable/track" />
 
         <TextView
+            android:id="@+id/testss"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Screen Translate"
@@ -76,6 +77,7 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:scaleType="center"
         android:id="@+id/iv_test"/>
 
 

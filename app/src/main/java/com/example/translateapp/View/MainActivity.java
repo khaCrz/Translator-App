@@ -1,6 +1,7 @@
 package com.example.translateapp.View;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -8,21 +9,26 @@ import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
+import android.speech.RecognizerIntent;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 
 import com.example.translateapp.R;
 import com.example.translateapp.databinding.ActivityMainBinding;
+import com.example.translateapp.databinding.FragmentTranslateBinding;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.io.File;
 import java.io.FileOutputStream;
+import java.util.ArrayList;
 import java.util.Date;
 
 public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener{
 
     BottomNavigationView bottomNavigationView;
     private ActivityMainBinding binding;
+    private final int REQ_CODE_SPEECH_INPUT = 100;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -95,4 +101,10 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
 //        intent.setDataAndType(uri, "image/*");
 //        startActivity(intent);
 //    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        secondFragment.onActivityRS(requestCode,resultCode,data);
+    }
 }

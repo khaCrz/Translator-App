@@ -23,10 +23,9 @@
 
         <Spinner
             android:id="@+id/from_language"
-            android:layout_width="80dp"
+            android:layout_width="140dp"
             android:layout_height="60dp"
             android:layout_gravity="center"
-            android:layout_marginRight="60dp"
             android:tooltipText=""
             android:layout_marginLeft="10dp"
 
@@ -38,13 +37,13 @@
             android:layout_width="80dp"
             android:layout_height="60dp"
             android:layout_gravity="center"
-            android:layout_marginRight="60dp"
             android:layout_marginLeft="15dp"
             android:src="@drawable/ic_baseline_swap_horiz_24"
+            android:scaleType="fitCenter"
             ></ImageButton>
         <Spinner
             android:id="@+id/to_language"
-            android:layout_width="80dp"
+            android:layout_width="140dp"
             android:layout_height="60dp"
             android:layout_gravity="center"
             android:layout_marginLeft="10dp"
@@ -71,6 +70,7 @@
             android:orientation="horizontal">
 
             <ImageButton
+                android:id="@+id/tts_in"
                 android:layout_width="80dp"
                 android:layout_height="50dp"
                 android:layout_gravity="center"
@@ -81,16 +81,7 @@
                 android:src="@drawable/sound1"></ImageButton>
 
             <ImageButton
-                android:layout_width="80dp"
-                android:layout_height="50dp"
-                android:layout_gravity="center"
-                android:layout_marginRight="20dp"
-                android:background="@color/white"
-                android:src="@drawable/ic_baseline_camera_alt_24"
-
-                ></ImageButton>
-
-            <ImageButton
+                android:id="@+id/mic_btn"
                 android:layout_width="80dp"
                 android:layout_height="50dp"
                 android:layout_gravity="center"
@@ -99,10 +90,12 @@
                 android:src="@drawable/ic_baseline_mic_24"></ImageButton>
 
             <ImageButton
+                android:id="@+id/delete_btn"
                 android:layout_width="80dp"
                 android:layout_height="50dp"
                 android:layout_gravity="center"
                 android:background="@color/white"
+                android:layout_marginLeft="120dp"
                 android:src="@drawable/ic_baseline_close_24"></ImageButton>
         </LinearLayout>
 
@@ -144,6 +137,7 @@
             android:layout_height="53dp"
             android:orientation="horizontal">
             <ImageButton
+                android:id="@+id/tts_out"
                 android:layout_width="80dp"
                 android:layout_height="50dp"
                 android:layout_marginRight="250dp"
@@ -152,6 +146,7 @@
                 android:src="@drawable/sound1"></ImageButton>
 
             <ImageButton
+                android:id="@+id/copy_btn"
                 android:layout_width="80dp"
                 android:layout_height="50dp"
                 android:background="@color/white"

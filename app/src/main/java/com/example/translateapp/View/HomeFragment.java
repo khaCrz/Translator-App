@@ -21,6 +21,7 @@ import androidx.fragment.app.Fragment;
 import com.example.translateapp.R;
 import com.example.translateapp.Service.FloatingViewService;
 import com.example.translateapp.databinding.FragmentHomeBinding;
+import com.example.translateapp.databinding.FragmentTranslateBinding;
 
 public class HomeFragment extends Fragment {
 
@@ -28,6 +29,7 @@ public class HomeFragment extends Fragment {
     String[] fromLanguage = {"From","Abkhazian", "Chinese", "Croatian", "Czech", "Danish", "Divehi, Dhivehi, Maldivian","Dutch","Dzongkha","English","Esperanto","Estonian","Fijian","Finnish","French","Fula, Fulah, Pulaar, Pular","Galician","Gaelic (Scottish)","Gaelic (Manx)","German","Hindi","Hungarian","Icelandic","Indonesian","Italian","Japanese","Javanese","Khmer","Korean","Latin","Latvian (Lettish)","Malay","Malayalam","Polish","Portuguese","Punjabi (Eastern)","Romanian","Russian","Sami","Samoan","Somali","Southern Ndebele","Spanish","Tajik",
             "Tamil","Thai","Ukrainian", "Vietnamese"};
     private FragmentHomeBinding binding;
+
     public HomeFragment() {
         // Required empty public constructor
     }

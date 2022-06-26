@@ -72,10 +72,18 @@ public class FloatingViewService extends Service {
         mFloatingView.findViewById(R.id.collapsed_iv).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Bitmap bitmap = Screenshot.getInstance().takeScreenshotForView(view);
-                ImageView ivTest = (ImageView) mFrag1.findViewById(R.id.iv_test);
+                view.measure(View.MeasureSpec.makeMeasureSpec(view.getWidth(), View.MeasureSpec.EXACTLY), View.MeasureSpec.makeMeasureSpec(view.getHeight(), View.MeasureSpec.EXACTLY));
+                view.layout((int) view.getX(), (int) view.getY(), (int) view.getX() + view.getMeasuredWidth(), (int) view.getY() + view.getMeasuredHeight());
+
+                view.setDrawingCacheEnabled(true);
+                view.buildDrawingCache(true);
+                Bitmap bitmap = Bitmap.createBitmap(view.getDrawingCache());
+                view.setDrawingCacheEnabled(false);
+
+                ImageView ivTest = (ImageView) view.findViewById(R.id.collapsed_iv);
                 ivTest.setImageBitmap(bitmap);
-                stopSelf();
+                //closeButtonCollapsed.setImageBitmap(bitmap);
+
             }
         });
 
