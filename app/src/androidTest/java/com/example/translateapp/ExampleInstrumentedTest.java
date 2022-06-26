@@ -1,4 +1,4 @@
-package com.midterm.traslator_app;
+package com.example.translateapp;
 
 import android.content.Context;
 
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
     public void useAppContext() {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        assertEquals("com.midterm.traslator_app", appContext.getPackageName());
+        assertEquals("com.example.translateapp", appContext.getPackageName());
     }
 }

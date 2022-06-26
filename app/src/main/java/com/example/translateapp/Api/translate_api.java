@@ -1,8 +1,7 @@
-package com.midterm.traslator_app;
+package com.example.translateapp.Api;
 
 import android.os.AsyncTask;
 import android.util.Log;
-
 import org.apache.http.HttpResponse;
 import org.apache.http.StatusLine;
 import org.apache.http.client.methods.HttpGet;

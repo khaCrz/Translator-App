@@ -3,13 +3,41 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/84932/Downloads/Translator-App-master/Translator-App-master/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.195" />
-        <entry key="..\:/Users/84932/Downloads/Translator-App-master/Translator-App-master/app/src/main/res/drawable/ic_baseline_camera_alt_24.xml" value="0.195" />
-        <entry key="..\:/Users/84932/Downloads/Translator-App-master/Translator-App-master/app/src/main/res/drawable/ic_baseline_mic_24.xml" value="0.195" />
-        <entry key="..\:/Users/84932/Downloads/Translator-App-master/Translator-App-master/app/src/main/res/drawable/ic_launcher_background.xml" value="0.195" />
-        <entry key="..\:/Users/84932/Downloads/Translator-App-master/Translator-App-master/app/src/main/res/layout/activity_main.xml" value="0.22826086956521738" />
-        <entry key="..\:/Users/84932/Downloads/Translator-App-master/Translator-App-master/app/src/main/res/layout/translate.xml" value="0.264" />
-        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/TraslatorApp/app/src/main/res/layout/activity_main.xml" value="0.10989583333333333" />
+        <entry key="..\:/Users/84932/Desktop/gitclone/Translator-App/app/src/main/res/drawable-v24/ic_baseline_mic_24.xml" value="0.2555" />
+        <entry key="..\:/Users/84932/Desktop/gitclone/Translator-App/app/src/main/res/drawable/ic_baseline_content_copy_24.xml" value="0.1795" />
+        <entry key="..\:/Users/84932/Desktop/gitclone/Translator-App/app/src/main/res/layout/fragment_home.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/84932/Desktop/gitclone/Translator-App/app/src/main/res/layout/fragment_setting.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/84932/Desktop/gitclone/Translator-App/app/src/main/res/layout/fragment_translate.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/84932/Desktop/gitclone/Translator-App/app/src/main/res/layout/layout_floating_widget.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/84932/Desktop/gitclone/Translator-App/app/src/main/res/layout/translate.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/84932/Desktop/translate_end/Translator-App/app/src/main/res/drawable-v24/ic_baseline_camera_alt_24.xml" value="0.119" />
+        <entry key="..\:/Users/84932/Desktop/translate_end/Translator-App/app/src/main/res/layout/activity_main.xml" value="0.10989583333333333" />
+        <entry key="..\:/Users/84932/Desktop/translate_end/Translator-App/app/src/main/res/layout/fragment_home.xml" value="0.22056159420289856" />
+        <entry key="..\:/Users/84932/Desktop/translate_end/Translator-App/app/src/main/res/layout/fragment_setting.xml" value="0.22056159420289856" />
+        <entry key="..\:/Users/84932/Desktop/translate_end/Translator-App/app/src/main/res/layout/fragment_translate.xml" value="0.264" />
+        <entry key="..\:/Users/84932/Desktop/translate_end/Translator-App/app/src/main/res/layout/history_translate.xml" value="0.22056159420289856" />
+        <entry key="..\:/Users/84932/Desktop/translate_end/Translator-App/app/src/main/res/layout/layout_floating_widget.xml" value="0.22056159420289856" />
+        <entry key="..\:/Users/ADMIN/Desktop/Main/Translator-App/app/src/main/res/drawable-v24/ic_baseline_swap_horiz_24.xml" value="0.2135" />
+        <entry key="..\:/Users/ADMIN/Desktop/Main/Translator-App/app/src/main/res/layout/activity_main.xml" value="0.24895833333333334" />
+        <entry key="..\:/Users/ADMIN/Desktop/Main/Translator-App/app/src/main/res/layout/fragment_home.xml" value="0.264" />
+        <entry key="..\:/Users/ADMIN/Desktop/Main/Translator-App/app/src/main/res/layout/fragment_setting.xml" value="0.25" />
+        <entry key="..\:/Users/ADMIN/Desktop/Main/Translator-App/app/src/main/res/layout/fragment_translate.xml" value="0.21965579710144928" />
+        <entry key="..\:/Users/ADMIN/Desktop/Main/Translator-App/app/src/main/res/layout/layout_floating_widget.xml" value="0.25" />
+        <entry key="..\:/Users/ADMIN/Desktop/Main/Translator-App/app/src/main/res/layout/spinner_item.xml" value="0.25" />
+        <entry key="..\:/Users/leloc/AndroidStudioProjects/TranslateApp/app/src/main/res/drawable-v24/ic_baseline_camera_alt_24.xml" value="0.3635" />
+        <entry key="..\:/Users/leloc/AndroidStudioProjects/TranslateApp/app/src/main/res/drawable-v24/ic_baseline_home_24.xml" value="0.1715" />
+        <entry key="..\:/Users/leloc/AndroidStudioProjects/TranslateApp/app/src/main/res/drawable/ic_baseline_translate_24.xml" value="0.1715" />
+        <entry key="..\:/Users/leloc/AndroidStudioProjects/TranslateApp/app/src/main/res/drawable/pink_out_line.xml" value="0.1715" />
+        <entry key="..\:/Users/leloc/AndroidStudioProjects/TranslateApp/app/src/main/res/drawable/thump.xml" value="0.3635" />
+        <entry key="..\:/Users/leloc/AndroidStudioProjects/TranslateApp/app/src/main/res/drawable/toggle_widget_background.xml" value="0.1715" />
+        <entry key="..\:/Users/leloc/AndroidStudioProjects/TranslateApp/app/src/main/res/drawable/track.xml" value="0.3635" />
+        <entry key="..\:/Users/leloc/AndroidStudioProjects/TranslateApp/app/src/main/res/layout/activity_main.xml" value="0.3625" />
+        <entry key="..\:/Users/leloc/AndroidStudioProjects/TranslateApp/app/src/main/res/layout/fragment_home.xml" value="0.5" />
+        <entry key="..\:/Users/leloc/AndroidStudioProjects/TranslateApp/app/src/main/res/layout/fragment_setting.xml" value="0.3625" />
+        <entry key="..\:/Users/leloc/AndroidStudioProjects/TranslateApp/app/src/main/res/layout/fragment_translate.xml" value="0.3625" />
+        <entry key="..\:/Users/leloc/AndroidStudioProjects/TranslateApp/app/src/main/res/layout/layout_floating_widget.xml" value="0.3625" />
+        <entry key="..\:/Users/leloc/AndroidStudioProjects/TranslateApp/app/src/main/res/layout/popup_window.xml" value="0.3625" />
+        <entry key="..\:/Users/leloc/AndroidStudioProjects/TranslateApp/app/src/main/res/menu/navigation_menu.xml" value="0.3625" />
       </map>
     </option>
   </component>

@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "510802781832",
-    "project_id": "translate-app-8b8d1",
-    "storage_bucket": "translate-app-8b8d1.appspot.com"
+    "project_number": "650524136698",
+    "project_id": "translateapps-5c91b",
+    "storage_bucket": "translateapps-5c91b.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:510802781832:android:9f061dc6258b1648cb613d",
+        "mobilesdk_app_id": "1:650524136698:android:39ccefa71dc4923ab02543",
         "android_client_info": {
-          "package_name": "com.midterm.traslator_app"
+          "package_name": "com.example.translateapp"
         }
       },
       "oauth_client": [
         {
-          "client_id": "510802781832-epv9klpfg26jeh2v8tqteorioulrmo60.apps.googleusercontent.com",
+          "client_id": "650524136698-rmlcestsv2oaqbbkcois5lhmvkq0g91j.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCx2b9dEBvhVBGm2EThPakNBaW9soFhldo"
+          "current_key": "AIzaSyC6ZN2aUHN60EZ7xWIwKIWtU8PFvGQRTU8"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "510802781832-epv9klpfg26jeh2v8tqteorioulrmo60.apps.googleusercontent.com",
+              "client_id": "650524136698-rmlcestsv2oaqbbkcois5lhmvkq0g91j.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

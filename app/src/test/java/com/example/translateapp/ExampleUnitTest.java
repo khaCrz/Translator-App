@@ -1,4 +1,4 @@
-package com.midterm.traslator_app;
+package com.example.translateapp;
 
 import org.junit.Test;
 
