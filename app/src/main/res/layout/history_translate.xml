@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    app:cardCornerRadius="5dp"
+    android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar">
+    <LinearLayout
+        android:layout_margin="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/my_border">
+
+        <TextView
+            android:id="@+id/textto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/textfrom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:textColor="@color/gray"/>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

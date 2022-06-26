@@ -148,6 +148,18 @@ public class HomeFragment extends Fragment {
                 dispatchTakePictureIntent();
             }
         });
+
+        binding.transferBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int FromID = binding.fromLanguage.getSelectedItemPosition();
+                int ToID = binding.toLanguage.getSelectedItemPosition();
+                binding.toLanguage.setSelection(FromID);
+                binding.fromLanguage.setSelection(ToID);
+
+            }
+        });
+
         return binding.getRoot();
     }
 

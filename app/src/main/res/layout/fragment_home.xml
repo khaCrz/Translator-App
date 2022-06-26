@@ -14,7 +14,7 @@
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="71dp"
+            android:layout_height="53dp"
             android:background="@color/BlueViolet"
             android:gravity="center"
             android:text="Tap Translate Screen"
@@ -96,7 +96,7 @@
                 android:tooltipText=""
                 android:layout_marginLeft="10dp"
 
-                ></Spinner>
+                />
 
             <ImageButton
                 android:id="@+id/transfer_btn"
@@ -105,26 +105,27 @@
                 android:layout_height="40dp"
                 android:layout_gravity="center"
                 android:layout_marginLeft="15dp"
-                android:src="@drawable/ic_baseline_swap_horiz_24"
-                android:scaleType="fitCenter"
-                ></ImageButton>
+                android:src="@drawable/ic_baseline_swap_horiz_24" />
+
             <Spinner
                 android:id="@+id/to_language"
                 android:layout_width="140dp"
                 android:layout_height="40dp"
                 android:layout_gravity="center"
-                android:layout_marginLeft="10dp"
-                ></Spinner>
+                android:layout_marginLeft="10dp" />
         </LinearLayout>
 
-        <Button
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
             android:id="@+id/take_picture"
+            android:paddingStart="0dp"
+            android:paddingEnd="0dp"
             android:layout_marginTop="10dp"
             android:layout_width="150dp"
             android:layout_height="50dp"
             android:text="Take Photo"
+            android:textAlignment="center"
             android:layout_gravity="center">
-        </Button>
+        </com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton>
 
         <ImageView
             android:id="@+id/TV_img_in"
@@ -139,8 +140,9 @@
                 android:id="@+id/tv_RS"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="20dp"
-                android:text="123">
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                >
             </TextView>
         </ScrollView>
 

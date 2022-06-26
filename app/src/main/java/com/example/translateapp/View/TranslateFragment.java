@@ -7,6 +7,7 @@ import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.view.LayoutInflater;
@@ -18,6 +19,9 @@ import android.widget.Toast;
 import android.speech.RecognizerIntent;
 
 import com.example.translateapp.Api.translate_api;
+import com.example.translateapp.Model.Appdatabase;
+import com.example.translateapp.Model.textDao;
+import com.example.translateapp.Model.textdata;
 import com.example.translateapp.R;
 import com.example.translateapp.databinding.FragmentHomeBinding;
 import com.example.translateapp.databinding.FragmentTranslateBinding;
@@ -26,6 +30,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Locale;
 import java.util.UUID;
 
@@ -35,6 +40,8 @@ public class TranslateFragment extends Fragment {
     private String TO_LANG = "To";
     private TextToSpeech tts;
     private final int REQ_CODE_SPEECH_INPUT = 100;
+    private Appdatabase appDatabase;
+    private textDao textDao;
     Locale language = Locale.ENGLISH;
     String[] fromLanguage = {"From","Abkhazian", "Chinese", "Croatian", "Czech", "Danish", "Divehi, Dhivehi, Maldivian","Dutch","Dzongkha","English","Esperanto","Estonian","Fijian","Finnish","French","Fula, Fulah, Pulaar, Pular","Galician","Gaelic (Scottish)","Gaelic (Manx)","German","Hindi","Hungarian","Icelandic","Indonesian","Italian","Japanese","Javanese","Khmer","Korean","Latin","Latvian (Lettish)","Malay","Malayalam","Polish","Portuguese","Punjabi (Eastern)","Romanian","Russian","Sami","Samoan","Somali","Southern Ndebele","Spanish","Tajik",
             "Tamil","Thai","Ukrainian", "Vietnamese"};
@@ -53,6 +60,8 @@ public class TranslateFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         binding = FragmentTranslateBinding.inflate(inflater,container,false);
+        appDatabase = Appdatabase.getInstance(getContext());
+        textDao = appDatabase.textDao();
         ArrayAdapter fromAdapter = new ArrayAdapter(this.getContext(), R.layout.spinner_item, fromLanguage);
         fromAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         binding.fromLanguage.setAdapter(fromAdapter);
@@ -181,6 +190,33 @@ public class TranslateFragment extends Fragment {
                 ClipData clip = ClipData.newPlainText("label", binding.outputTv.getText().toString());
                 clipboard.setPrimaryClip(clip);
                 Toast.makeText(getContext(), "Copied to clipboard", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        binding.favoriteBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String fromlanguage = binding.fromLanguage.getSelectedItem().toString();
+
+                String tolanguage = binding.toLanguage.getSelectedItem().toString();
+
+                String textfrom = binding.inputTv.getText().toString();
+
+                String textto = binding.outputTv.getText().toString();
+                String datetime = Calendar.getInstance().getTime().toString();
+                if(!textfrom.isEmpty() && !textto.isEmpty()) {
+                    AsyncTask.execute(new Runnable() {
+                        @Override
+                        public void run() {
+                            textdata contact6 = new textdata(fromlanguage, tolanguage, textfrom, textto, datetime);
+                            textDao.insert(contact6);
+                            System.out.println("Uploaded");
+                        }
+                    });
+                }
+                else{
+                    Toast.makeText(getContext(),"Please enter input text and click translate button!!", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
